@@ -1,8 +1,7 @@
- import java.util.Scanner;
+import java.util.Scanner;
+public class ex1{
 
-public class methode1 {
-    
-    // M�thode pour lire un entier strictement positif
+    // Méthode pour lire un entier strictement positif
     public static int lectureN() {
         Scanner scanner = new Scanner(System.in);
         int n;
@@ -15,20 +14,21 @@ public class methode1 {
             }
             n = scanner.nextInt();
             if (n <= 0) {
-                System.out.println("Erreur : L'entier doit �tre strictement positif.");
+                System.out.println("Erreur : L'entier doit être strictement positif.");
             }
         } while (n <= 0);
 
         return n;
     }
 
-    // M�thode pour compter le nombre de chiffres d'un entier
+    // Méthode pour compter le nombre de chiffres d'un entier
     public static int Compter(int n) {
         return String.valueOf(n).length();
     }
 
-      // M�thode pour v�rifier si un nombre est pair
-    public static boolean EstPair(int n) {
-        return n % 2 == 0;
+    // Méthode principale
+    public static void main(String[] args) {
+        int nombre = lectureN();
+        System.out.println("Le nombre de chiffres de " + nombre + " est : " + Compter(nombre));
     }
 }
